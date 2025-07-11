@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geri Sayım</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Geri Sayım</h1>
+        
+        <div class="input-section">
+            <label for="countdown-input">Kaç saniye sayalım:</label>
+            <div class="input-wrapper">
+                <input type="number" id="countdown-input" min="1" value="10">
+            </div>
+        </div>
+        
+        <div class="display-section">
+            <p id="countdown-display">10</p>
+            <div class="progress-bar">
+                <div class="progress" id="progress-fill"></div>
+            </div>
+            <p id="status-message"></p>
+        </div>
+        
+        <div class="button-section">
+            <button id="start-button"><i class="fas fa-play"></i> Başlat</button>
+            <button id="reset-button"><i class="fas fa-redo"></i> Sıfırla</button>
+        </div>
+    </div>
+
+    <audio id="tick-sound" src="https://assets.mixkit.co/active_storage/sfx/2585/2585-preview.mp3"></audio>
+    <script src="script.js"></script>
+</body>
+</html> 

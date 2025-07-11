@@ -1,0 +1,189 @@
+:root {
+    --primary-color: #4361ee;
+    --primary-hover: #3a56d4;
+    --danger-color: #ef476f;
+    --danger-hover: #d64062;
+    --background-color: #f8f9fa;
+    --container-bg: #ffffff;
+    --text-color: #2b2d42;
+    --secondary-text: #555b6e;
+    --border-color: #e9ecef;
+    --shadow-color: rgba(0, 0, 0, 0.08);
+    --progress-bg: #e9ecef;
+    --progress-color: #4361ee;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.container {
+    width: 90%;
+    max-width: 480px;
+    padding: 30px;
+    background-color: var(--container-bg);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px var(--shadow-color);
+    text-align: center;
+}
+
+h1 {
+    color: var(--text-color);
+    font-size: 30px;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.input-section {
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: var(--secondary-text);
+    font-size: 16px;
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type="number"] {
+    width: 100%;
+    max-width: 200px;
+    padding: 12px;
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    font-size: 18px;
+    text-align: center;
+    background-color: var(--container-bg);
+    color: var(--text-color);
+}
+
+input[type="number"]:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.display-section {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+#countdown-display {
+    font-size: 80px;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    height: 10px;
+    background-color: var(--progress-bg);
+    border-radius: 5px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background-color: var(--progress-color);
+    width: 100%;
+    transition: width 1s linear;
+    border-radius: 5px;
+}
+
+#status-message {
+    font-size: 18px;
+    color: var(--danger-color);
+    font-weight: 600;
+    min-height: 24px;
+}
+
+.button-section {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+button i {
+    font-size: 14px;
+}
+
+#start-button {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+#start-button:hover {
+    background-color: var(--primary-hover);
+}
+
+#reset-button {
+    background-color: var(--danger-color);
+    color: white;
+}
+
+#reset-button:hover {
+    background-color: var(--danger-hover);
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+    
+    #countdown-display {
+        font-size: 65px;
+    }
+    
+    button {
+        padding: 10px 20px;
+    }
+    
+    h1 {
+        font-size: 26px;
+    }
+    
+    input[type="number"] {
+        padding: 10px;
+        font-size: 16px;
+    }
+} 
