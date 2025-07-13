@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Görev Takip Sistemi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <header class="app-header">
+      <div class="logo">
+        <h1>Görev Takip Sistemi</h1>
+      </div>
+    </header>
+
+    <div class="content-wrapper">
+      <aside class="sidebar">
+        <div class="panel">
+          <div class="panel-header">
+            <h2>Yeni Görev Oluştur</h2>
+          </div>
+          <div class="panel-body">
+            <form id="gorevForm">
+              <div class="form-element">
+                <label for="gorevBaslik">Başlık <span class="zorunlu">*</span></label>
+                <input type="text" id="gorevBaslik" class="form-kontrol" placeholder="Görev başlığını yazın">
+                <div id="baslikHata" class="hata-mesaji"></div>
+              </div>
+              
+              <div class="form-element">
+                <label for="gorevAciklama">Açıklama</label>
+                <textarea id="gorevAciklama" class="form-kontrol" placeholder="Görev detaylarını yazın"></textarea>
+              </div>
+              
+              <div class="form-element">
+                <label>Öncelik <span class="zorunlu">*</span></label>
+                <div class="oncelik-secenekleri">
+                  <div class="oncelik-secenek">
+                    <input type="radio" id="dusukOncelik" name="oncelik" value="dusuk">
+                    <label for="dusukOncelik">Düşük</label>
+                  </div>
+                  <div class="oncelik-secenek">
+                    <input type="radio" id="ortaOncelik" name="oncelik" value="orta">
+                    <label for="ortaOncelik">Orta</label>
+                  </div>
+                  <div class="oncelik-secenek">
+                    <input type="radio" id="yuksekOncelik" name="oncelik" value="yuksek">
+                    <label for="yuksekOncelik">Yüksek</label>
+                  </div>
+                </div>
+                <div id="oncelikHata" class="hata-mesaji"></div>
+              </div>
+              
+              <div class="form-butonlar">
+                <button type="submit" class="buton buton-birincil">Görevi Ekle</button>
+                <button type="reset" class="buton buton-ikincil">Temizle</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </aside>
+
+      <main class="ana-icerik">
+        <div class="panel">
+          <div class="panel-header">
+            <h2>Görevlerim</h2>
+            <div class="filtre-araclari">
+              <button id="tumunuGoster" class="buton buton-kucuk buton-birincil">Tümünü Göster</button>
+              <button id="tamamlananlariGoster" class="buton buton-kucuk buton-ikincil">Tamamlananları Göster</button>
+              <button id="onceligeGoreSirala" class="buton buton-kucuk buton-ikincil">Önceliğe Göre Sırala</button>
+            </div>
+          </div>
+          <div class="panel-body">
+            <div id="gorevListesi" class="gorev-listesi">
+              <div class="bos-durum">
+                <p>Henüz görev eklenmemiş.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
