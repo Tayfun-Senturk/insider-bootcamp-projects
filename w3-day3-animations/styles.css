@@ -115,7 +115,7 @@ h1 {
   animation: shake 0.5s;
 }
 .profile-card.bounce {
-  animation: bounce 0.7s !important;
+  animation: bounce 0.7s;
 }
 .profile-card.fade-in {
   animation: fadeInCard 0.7s;

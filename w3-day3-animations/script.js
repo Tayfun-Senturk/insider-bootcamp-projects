@@ -62,11 +62,11 @@ $(function () {
 
       card.on('mouseenter', function () {
         const $self = $(this);
-        $self.removeClass('twist-in');
+        $self.removeClass('fade-in slide-down twist-in');
+        $self.css('display', 'flex');
         $self.addClass('bounce');
         setTimeout(() => {
           $self.removeClass('bounce');
-
         }, 700);
       });
       card.on('mouseleave', function () {
